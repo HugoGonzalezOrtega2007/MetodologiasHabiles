@@ -16,11 +16,6 @@ public class Mago extends Combate {
         this.ataqueMagicoMago = ataqueMagicoMago;
     }
 
-    @Override
-    public String toString() {
-        return "Estadisticas del mago -- Vida: " + getVidaMaxima() + " | Energia: " + getEnergia();
-    }
-
     public void turnoMago(Guerrero guerrero) {
         Scanner sc = new Scanner(System.in);
         int esquivo = (int) (Math.random() * 10);
@@ -34,7 +29,7 @@ public class Mago extends Combate {
                     System.out.println("El guerrero ha esquivado el ataque");
                 } else {
                     System.out.println("El mago ha conectado un ataque al guerrero");
-                    guerrero.setVidaMaxima(getVidaMaxima()-getAtaque());
+                    guerrero.setVidaMaxima(guerrero.getVidaMaxima()-getAtaque());
                 }
                 break;
 
@@ -49,6 +44,6 @@ public class Mago extends Combate {
                 break;
 
         }
-
+        System.out.println("Estadisticas del mago -- Vida: " + getVidaMaxima() + " | Energia: " + getEnergia());
     }
 }
