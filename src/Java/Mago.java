@@ -30,6 +30,9 @@ public class Mago extends Combate {
                 } else {
                     System.out.println("El mago ha conectado un ataque al guerrero");
                     guerrero.setVidaMaxima(guerrero.getVidaMaxima()-getAtaque());
+                    if () {
+
+                    }
                 }
                 break;
 
