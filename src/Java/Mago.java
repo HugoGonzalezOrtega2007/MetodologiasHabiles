@@ -1,5 +1,6 @@
 package Java;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Mago extends Combate {
@@ -17,8 +18,9 @@ public class Mago extends Combate {
     }
 
     public void turnoMago(Guerrero guerrero) {
+        Random random = new Random();
         Scanner sc = new Scanner(System.in);
-        int esquivo = (int) (Math.random() * 10);
+        int esquivo = random.nextInt(5) + 1;
 
         System.out.print("Que acción desea realizar el mago (1. Ataque normal | 2. Ataque magico): ");
         int eleccion = sc.nextInt();
@@ -28,7 +30,7 @@ public class Mago extends Combate {
                 if (esquivo == 3) {
                     System.out.println("El guerrero ha esquivado el ataque");
                 } else {
-                    System.out.println("El mago ha conectado un ataque al guerrero");
+                    System.out.println("El mago ha realizado un ataque y le ha hecho " + getAtaque() + " de daño a " + guerrero.getNombre() + ".");
                     guerrero.setVidaMaxima(guerrero.getVidaMaxima()-getAtaque());
                 }
                 break;
@@ -37,7 +39,7 @@ public class Mago extends Combate {
                 if (esquivo == 3) {
                     System.out.println("El guerrero ha esquivado el ataque");
                 } else {
-                    System.out.println("El mago ha realizado un ataque magico");
+                    System.out.println("El mago ha realizado un ataque magico y le ha hecho " + getAtaqueMagicoMago() + " de daño a " + guerrero.getNombre() + ".");
                     guerrero.setVidaMaxima(getVidaMaxima()-ataqueMagicoMago);
                     setEnergia(getEnergia()-10);
                 }

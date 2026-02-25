@@ -32,7 +32,7 @@ public class Guerrero extends Combate {
     public void turnoguerrero(Mago enemigo){
         Random random=new Random();
         Scanner sc=new Scanner(System.in);
-        System.out.print("Que acción deseas realizar el guerrero (1. Ataque  | 2. Aumentar furia): ");
+        System.out.print("Que acción desea realizar el guerrero (1. Ataque  | 2. Aumentar furia): ");
         int eleccion = sc.nextInt();
         double danio=0;
 
@@ -42,15 +42,18 @@ public class Guerrero extends Combate {
                 if (numeroaleatorio<=3){
                     danio= getAtaque();
                     enemigo.recibirdanio(danio);
-                    System.out.println("Has hecho " + danio + " de daño.");
+                    System.out.println("El guerrero ha realizado un ataque y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + ".");
+
                 } else if (numeroaleatorio==4) {
                     danio=getAtaque()*1.5;
                     enemigo.recibirdanio(danio);
-                    System.out.println("Golpe crítico! Has hecho " + danio + " de daño.");
+                    System.out.println("¡El guerrero ha realizado un golpe crítico y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + "!");
+
                 } else {
-                    System.out.println("Has fallado el ataque.");
+                    System.out.println("El guerrero ha fallado su ataque.");
                 }
                 break;
+
             case 2:
                 furia += 10;
                 System.out.println("Tu furia ahora es: " + furia);
