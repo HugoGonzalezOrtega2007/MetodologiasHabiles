@@ -58,4 +58,11 @@ public class Guerrero extends Combate {
         }
 
     }
+    public boolean estaVivo() {
+        return getVidaMaxima() > 0;
+    }
+
+    public int getVidaMaxima() {
+        return getVidaMaxima();
+    }
 }
