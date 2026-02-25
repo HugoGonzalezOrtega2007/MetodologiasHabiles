@@ -46,7 +46,7 @@ public class Combate {
         this.ataque = ataque;
     }
 
-    
+
 
     public void esquivar(){
         int esquivo = (int) (Math.random() * 10);
