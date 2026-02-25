@@ -45,17 +45,7 @@ public class Combate {
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
-
-
-
-    public void esquivar(){
-        int esquivo = (int) (Math.random() * 10);
-        if (esquivo == 3) {
-            System.out.println("El personaje ha esquivado el ataque");
-        } else {
-            System.out.println("El personaje ha recibido el ataque");
-        }
-    }
+    
 
     public void ataqueEnergiaBaja(){
         if (energia<20){

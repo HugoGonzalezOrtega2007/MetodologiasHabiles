@@ -23,13 +23,18 @@ public class Mago extends Combate {
 
         switch (eleccion) {
             case 1:
-                System.out.println("te he atacadi");
+                System.out.println("El mago ha conectado un ataque al guerrero");
                 guerre.setVidaMaxima(getVidaMaxima()-10);
                 break;
             case 2:
                 break;
             case 3:
-
+                int esquivo = (int) (Math.random() * 5);
+                if (esquivo == 3) {
+                    System.out.println("El personaje ha esquivado el ataque");
+                } else {
+                    System.out.println("El personaje ha recibido el ataque");
+                }
                 break;
         }
     }
