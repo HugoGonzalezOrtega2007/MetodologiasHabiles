@@ -34,21 +34,28 @@ public class Guerrero extends Combate {
         Scanner sc=new Scanner(System.in);
         System.out.println("Que acción deseas realizar: (1. Ataque  | 2. Aumentar furia)");
         int eleccion = sc.nextInt();
-
+        double danio=0;
 
         switch (eleccion) {
             case 1:
                 int numeroaleatorio= random.nextInt(5)+1;
                 if (numeroaleatorio<=3){
-                    int danio= getAtaque();
+                    danio= getAtaque();
                     enemigo.recibirdanio(danio);
+                    System.out.println("Has hecho " + danio + " de daño.");
+                } else if (numeroaleatorio==4) {
+                    danio=getAtaque()*1.5;
+                    System.out.println("Has hecho " + danio + " de daño.");
+                } else {
+                    System.out.println("Has fallado el ataque.");
                 }
-                System.out.println("te he atacadi");
-                enemigo.setVidaMaxima(getVidaMaxima()-10);
                 break;
             case 2:
+                furia += 10;
+                System.out.println("Tu furia ahora es: " + furia);
                 break;
 
         }
+
     }
 }

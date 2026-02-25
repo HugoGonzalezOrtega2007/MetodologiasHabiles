@@ -1,6 +1,4 @@
 package Java;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Combate {
     private String nombre;
@@ -46,7 +44,7 @@ public class Combate {
         this.ataque = ataque;
     }
 
-    public void recibirdanio(int danio) {
+    public void recibirdanio(double danio) {
         vidaMaxima -= danio;
 
         if (vidaMaxima < 0) {
