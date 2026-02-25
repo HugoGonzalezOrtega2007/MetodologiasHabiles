@@ -45,7 +45,8 @@ public class Guerrero extends Combate {
                     System.out.println("Has hecho " + danio + " de daño.");
                 } else if (numeroaleatorio==4) {
                     danio=getAtaque()*1.5;
-                    System.out.println("Has hecho " + danio + " de daño.");
+                    enemigo.recibirdanio(danio);
+                    System.out.println("Golpe crítico! Has hecho " + danio + " de daño.");
                 } else {
                     System.out.println("Has fallado el ataque.");
                 }
@@ -60,9 +61,5 @@ public class Guerrero extends Combate {
     }
     public boolean estaVivo() {
         return getVidaMaxima() > 0;
-    }
-
-    public int getVidaMaxima() {
-        return getVidaMaxima();
     }
 }
