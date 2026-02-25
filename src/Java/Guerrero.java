@@ -55,8 +55,9 @@ public class Guerrero extends Combate {
                 break;
 
             case 2:
-                furia += 10;
+                furia += 2;
                 System.out.println("Tu furia ahora es: " + furia);
+
                 break;
 
         }
