@@ -5,5 +5,9 @@ public class Main {
         Mago mago = new Mago("Dolfor");
         Guerrero g1=new Guerrero("Aña");
 
+        System.out.println(mago);
+
+
+
     }
 }

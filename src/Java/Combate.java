@@ -45,7 +45,7 @@ public class Combate {
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
-    
+
 
     public void ataqueEnergiaBaja(){
         if (energia<20){
