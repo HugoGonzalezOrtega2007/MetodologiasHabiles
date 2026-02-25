@@ -11,7 +11,7 @@ public class Main {
 
             if (!mago.estaVivo()) break;
 
-            mago.turnomago(guerrero);
+            mago.turnoMago(guerrero);
 
             System.out.println("Vida Guerrero: " + guerrero.getVidaMaxima());
             System.out.println("Vida Mago: " + mago.getVidaMaxima());
