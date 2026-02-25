@@ -46,11 +46,6 @@ public class Combate {
 
     public void recibirdanio(double danio) {
         vidaMaxima -= danio;
-
-    public void ataqueEnergiaBaja(){
-        if (energia<20){
-            vidaMaxima-=ataque+15;
-        }
     }
 }
 
