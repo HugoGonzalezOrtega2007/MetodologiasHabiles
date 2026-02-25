@@ -41,7 +41,7 @@ public class Guerrero extends Combate {
                 int numeroaleatorio= random.nextInt(5)+1;
                 if (numeroaleatorio<=3){
                     int danio= getAtaque();
-                    enemigo.
+                    enemigo.recibirdanio(danio);
                 }
                 System.out.println("te he atacadi");
                 enemigo.setVidaMaxima(getVidaMaxima()-10);

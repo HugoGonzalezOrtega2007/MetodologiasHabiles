@@ -45,12 +45,14 @@ public class Combate {
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
-    
 
-    public void ataqueEnergiaBaja(){
-        if (energia<20){
-            vidaMaxima-=ataque+15;
+    public void recibirdanio(int danio) {
+        vidaMaxima -= danio;
+
+        if (vidaMaxima < 0) {
+            vidaMaxima = 0;
         }
     }
+
 }
 
