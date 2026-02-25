@@ -46,6 +46,8 @@ public class Combate {
         this.ataque = ataque;
     }
 
+    
+
     public void esquivar(){
         int esquivo = (int) (Math.random() * 10);
         if (esquivo == 3) {
@@ -60,24 +62,5 @@ public class Combate {
             vidaMaxima-=ataque+15;
         }
     }
-
-    public void turnoMago() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Que acción deseas realizar: (1. Ataque normal | 2. Ataque magico | 3. Esquivar");
-        int eleccion = sc.nextInt();
-
-        switch (eleccion) {
-            case 1:
-                System.out.println("te he atacadi");
-                vidaMaxima -= 10;
-                break;
-            case 2:
-                break;
-            case 3:
-
-                break;
-        }
-    }
-
 }
 
