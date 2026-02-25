@@ -1,4 +1,6 @@
 package Java;
 
-public class Guerrero {
+public class Guerrero extends Combate {
+    private int escudo=50;
+    
 }
