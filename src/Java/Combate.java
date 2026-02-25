@@ -78,22 +78,6 @@ public class Combate {
                 break;
         }
     }
-    public void turnoguerrero(){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Que acción deseas realizar: (1. Ataque normal | 2. Aumentar furia)");
-        int eleccion = sc.nextInt();
 
-        switch (eleccion) {
-            case 1:
-                System.out.println("te he atacadi");
-                vidaMaxima -= 10;
-                break;
-            case 2:
-                break;
-            case 3:
-
-                break;
-        }
-    }
 }
 
