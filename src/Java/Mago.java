@@ -30,7 +30,7 @@ public class Mago extends Combate {
                 } else {
                     System.out.println("El mago ha conectado un ataque al guerrero");
                     guerrero.setVidaMaxima(guerrero.getVidaMaxima()-getAtaque());
-                    if () {
+                    if (guerrer) {
 
                     }
                 }
@@ -48,5 +48,6 @@ public class Mago extends Combate {
 
         }
         System.out.println("Estadisticas del mago -- Vida: " + getVidaMaxima() + " | Energia: " + getEnergia());
+        
     }
 }
