@@ -1,5 +1,6 @@
 package Java;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Guerrero extends Combate {
@@ -28,22 +29,26 @@ public class Guerrero extends Combate {
         this.furia = furia;
     }
 
-    public void turnoguerrero(){
-
+    public void turnoguerrero(Mago enemigo){
+        Random random=new Random();
         Scanner sc=new Scanner(System.in);
-        System.out.println("Que acción deseas realizar: (1. Ataque normal | 2. Aumentar furia)");
+        System.out.println("Que acción deseas realizar: (1. Ataque  | 2. Aumentar furia)");
         int eleccion = sc.nextInt();
+
 
         switch (eleccion) {
             case 1:
+                int numeroaleatorio= random.nextInt(5)+1;
+                if (numeroaleatorio<=3){
+                    int danio= getAtaque();
+                    enemigo.recibirdanio(danio);
+                }
                 System.out.println("te he atacadi");
-                vidaMaxima -= 10;
+                enemigo.setVidaMaxima(getVidaMaxima()-10);
                 break;
             case 2:
                 break;
-            case 3:
 
-                break;
         }
     }
 }
