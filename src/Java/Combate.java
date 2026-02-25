@@ -2,6 +2,7 @@ package Java;
 import java.util.Random;
 
 public class Combate {
+    private String nombre;
     private int vidaMaxima = 100;
     private int ataque = 15;
 
