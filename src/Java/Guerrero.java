@@ -32,7 +32,7 @@ public class Guerrero extends Combate {
     public void turnoguerrero(Mago enemigo){
         Random random=new Random();
         Scanner sc=new Scanner(System.in);
-        System.out.println("Que acción deseas realizar: (1. Ataque  | 2. Aumentar furia)");
+        System.out.print("Que acción deseas realizar el guerrero (1. Ataque  | 2. Aumentar furia): ");
         int eleccion = sc.nextInt();
         double danio=0;
 

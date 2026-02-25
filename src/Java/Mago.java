@@ -20,7 +20,7 @@ public class Mago extends Combate {
         Scanner sc = new Scanner(System.in);
         int esquivo = (int) (Math.random() * 10);
 
-        System.out.println("Que acción deseas realizar: (1. Ataque normal | 2. Ataque magico");
+        System.out.print("Que acción desea realizar el mago (1. Ataque normal | 2. Ataque magico): ");
         int eleccion = sc.nextInt();
 
         switch (eleccion) {
@@ -44,7 +44,6 @@ public class Mago extends Combate {
                 break;
 
         }
-        System.out.println("Estadisticas del mago -- Vida: " + getVidaMaxima() + " | Energia: " + getEnergia());
     }
     public boolean estaVivo() {
         return getVidaMaxima() > 0;
