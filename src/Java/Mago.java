@@ -22,7 +22,7 @@ public class Mago extends Combate {
         Scanner sc = new Scanner(System.in);
         int esquivo = random.nextInt(5) + 1;
 
-        boolean volver = false;
+        boolean volver = true;  // <-- empieza en true para entrar al bucle
         while (volver) {
             System.out.print("Que acción desea realizar el mago (1. Ataque normal | 2. Ataque magico): ");
             int eleccion = sc.nextInt();
@@ -35,22 +35,28 @@ public class Mago extends Combate {
                         System.out.println("El mago ha realizado un ataque y le ha hecho " + getAtaque() + " de daño a " + guerrero.getNombre() + ".");
                         guerrero.setVidaMaxima(guerrero.getVidaMaxima() - getAtaque());
                     }
+                    volver = false;  // <-- acción válida, salir del bucle
                     break;
 
                 case 2:
-                    if (esquivo == 3) {
+                    if (getEnergia() < 20) {
+                        System.out.println("El mago no dispone de suficiente energía. Vuelve a escoger.");
+                        // volver sigue siendo true, se repite el bucle
+                    } else if (esquivo == 3) {
                         System.out.println("El guerrero ha esquivado el ataque");
-                    } else if (getEnergia() < 20) {
-                        System.out.println("El mago no dispone de la suficiente energia como para realizar un ataque mágico. Vuelve a escoger.");
-                        volver = true;
+                        volver = false;
                     } else {
-                        System.out.println("El mago ha realizado un ataque magico y le ha hecho " + getAtaqueMagicoMago() + " de daño a " + guerrero.getNombre() + ".");
-                        guerrero.setVidaMaxima(getVidaMaxima() - ataqueMagicoMago);
-                        setEnergia(getEnergia() - 10);
+                        System.out.println("El mago ha realizado un ataque mágico y le ha hecho " + getAtaqueMagicoMago() + " de daño a " + guerrero.getNombre() + ".");
+                        guerrero.setVidaMaxima(guerrero.getVidaMaxima() - ataqueMagicoMago);
+                        setEnergia(getEnergia() - 30);
+                        volver = false;
                     }
                     break;
-
             }
+        }
+        sc.nextLine();
+        if(getEnergia()<=80){
+            setEnergia(getEnergia() + 10);
         }
     }
     public boolean estaVivo() {

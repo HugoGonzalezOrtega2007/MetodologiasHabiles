@@ -45,7 +45,7 @@ public class Guerrero extends Combate {
                     System.out.println("El guerrero ha realizado un ataque y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + ".");
 
                 } else if (numeroaleatorio==4) {
-                    danio=getAtaque()*1.5;
+                    danio=(getAtaque()*1.5)*getFuria();
                     enemigo.recibirdanio(danio);
                     System.out.println("¡El guerrero ha realizado un golpe crítico y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + "!");
 
@@ -57,9 +57,13 @@ public class Guerrero extends Combate {
             case 2:
                 furia += 1;
                 System.out.println("Tu furia ahora es: " + furia);
-
+                setEnergia(getEnergia() - 50);
                 break;
 
+        }
+        sc.nextLine();
+        if(getEnergia()<=80){
+            setEnergia(getEnergia() + 10);
         }
 
     }
