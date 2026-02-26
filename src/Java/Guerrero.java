@@ -10,7 +10,7 @@ public class Guerrero extends Combate {
     public Guerrero(String nombre) {
         super(nombre);
         this.escudo = 50;
-        this.furia = 0;
+        this.furia = 1;
     }
 
     public int getEscudo() {
@@ -40,7 +40,7 @@ public class Guerrero extends Combate {
             case 1:
                 int numeroaleatorio= random.nextInt(5)+1;
                 if (numeroaleatorio<=3){
-                    danio= getAtaque();
+                    danio= getAtaque()*getFuria();
                     enemigo.recibirdanio(danio);
                     System.out.println("El guerrero ha realizado un ataque y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + ".");
 
@@ -55,7 +55,7 @@ public class Guerrero extends Combate {
                 break;
 
             case 2:
-                furia += 2;
+                furia += 1;
                 System.out.println("Tu furia ahora es: " + furia);
 
                 break;
