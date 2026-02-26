@@ -39,12 +39,12 @@ public class Guerrero extends Combate {
         switch (eleccion) {
             case 1:
                 int numeroaleatorio= random.nextInt(5)+1;
-                if (numeroaleatorio<=3){
+                if (numeroaleatorio<=4){
                     danio= getAtaque()*getFuria();
                     enemigo.recibirdanio(danio);
                     System.out.println("El guerrero ha realizado un ataque y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + ".");
 
-                } else if (numeroaleatorio==4) {
+                } else if (numeroaleatorio==3) {
                     danio=(getAtaque()*1.5)*getFuria();
                     enemigo.recibirdanio(danio);
                     System.out.println("¡El guerrero ha realizado un golpe crítico y le ha hecho " + danio + "de daño a " + enemigo.getNombre() + "!");
