@@ -41,7 +41,7 @@ public class Mago extends Combate {
                 case 2:
                     if (getEnergia() < 20) {
                         System.out.println("El mago no dispone de suficiente energía. Vuelve a escoger.");
-                        
+
                     } else if (esquivo == 3) {
                         System.out.println("El guerrero ha esquivado el ataque");
                         volver = false;
