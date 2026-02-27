@@ -22,7 +22,7 @@ public class Mago extends Combate {
         Scanner sc = new Scanner(System.in);
         int esquivo = random.nextInt(5) + 1;
 
-        boolean volver = true;  // <-- empieza en true para entrar al bucle
+        boolean volver = true;
         while (volver) {
             System.out.print("Que acción desea realizar el mago (1. Ataque normal | 2. Ataque magico): ");
             int eleccion = sc.nextInt();
@@ -35,13 +35,13 @@ public class Mago extends Combate {
                         System.out.println("El mago ha realizado un ataque y le ha hecho " + getAtaque() + " de daño a " + guerrero.getNombre() + ".");
                         guerrero.setVidaMaxima(guerrero.getVidaMaxima() - getAtaque());
                     }
-                    volver = false;  // <-- acción válida, salir del bucle
+                    volver = false;
                     break;
 
                 case 2:
                     if (getEnergia() < 20) {
                         System.out.println("El mago no dispone de suficiente energía. Vuelve a escoger.");
-                        // volver sigue siendo true, se repite el bucle
+                        
                     } else if (esquivo == 3) {
                         System.out.println("El guerrero ha esquivado el ataque");
                         volver = false;
